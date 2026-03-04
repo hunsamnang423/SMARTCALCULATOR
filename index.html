@@ -10,19 +10,23 @@
     <meta name="description" content="កម្មវិធីគណនាប្រាក់ខែ (USD & KHR) ងាយស្រួលប្រើ ត្រឹមត្រូវ និងរហ័ស។ អបអរសាទរពិធីបុណ្យចូលឆ្នាំថ្មីប្រពៃណីជាតិខ្មែរ!">
     <meta name="theme-color" content="#BE123C">
 
-    <!-- Open Graph / Facebook / Telegram (សម្រាប់ពេល Share លីង) -->
+    <!-- Open Graph / Facebook / Telegram -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://yourwebsite.com/"> <!-- ដូរទៅជា លីង Website របស់អ្នក -->
-    <meta property="og:title" content="កម្មវិធីគណនាប្រាក់ខែ - សួស្ដីឆ្នាំថ្មី">
+    <meta property="og:url" content="https://i.imgur.com/GcPY4Li_d.webp?maxwidth=760&fidelity=grand"> <!-- ត្រូវប្តូរទៅជា Link ពិតប្រាកដរបស់អ្នកពេល Upload លើ Internet -->
+    <meta property="og:title" content="គណនាប្រាក់ខែ - សួស្ដីឆ្នាំថ្មី">
     <meta property="og:description" content="កម្មវិធីគណនាប្រាក់ខែ (USD & KHR) ងាយស្រួលប្រើ ត្រឹមត្រូវ និងរហ័ស។">
-    <meta property="og:image" content="https://i.imgur.com/GcPY4Li_d.webp"> 
+    <!-- បានប្តូរពី .webp ទៅ .jpg ដើម្បីឱ្យ Facebook/Telegram ងាយស្រួលអាន -->
+    <meta property="og:image" content="https://i.imgur.com/GcPY4Li_d.jpg"> 
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://yourwebsite.com/"> <!-- ដូរទៅជា លីង Website របស់អ្នក -->
-    <meta property="twitter:title" content="កម្មវិធីគណនាប្រាក់ខែ - សួស្ដីឆ្នាំថ្មី">
+    <meta property="twitter:url" content="https://i.imgur.com/GcPY4Li_d.webp?maxwidth=760&fidelity=grand">
+    <meta property="twitter:title" content="គណនាប្រាក់ខែ - សួស្ដីឆ្នាំថ្មី">
     <meta property="twitter:description" content="កម្មវិធីគណនាប្រាក់ខែ (USD & KHR) ងាយស្រួលប្រើ ត្រឹមត្រូវ និងរហ័ស។">
-    <meta property="twitter:image" content="https://i.imgur.com/GcPY4Li_d.webp">
+    <meta property="twitter:image" content="https://i.imgur.com/GcPY4Li_d.jpg">
 
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -207,7 +211,6 @@
                             <label class="text-[9px] font-bold text-slate-500 dark:text-knyGold/70 ml-1 uppercase">ថ្ងៃសរុប/ខែ</label>
                             <input type="number" id="workDays" value="26" class="input-box w-full p-2.5 text-center" oninput="calculate()">
                         </div>
-                        <!-- NEW INPUT FOR ACTUAL DAYS WORKED -->
                         <div class="space-y-1.5">
                             <label class="text-[9px] font-bold text-knyRed dark:text-knyGold ml-1 uppercase">ធ្វើការជាក់ស្តែង</label>
                             <input type="number" id="actualDays" value="26" class="input-box w-full p-2.5 text-center border-knyGold/50" oninput="calculate()">
@@ -457,7 +460,6 @@
 
         window.onload = function() {
             calculate();
-            // ដក Animation ផាវនៅពេលបើកកម្មវិធីចេញ
         };
 
         function toggleDarkMode() {
@@ -482,7 +484,6 @@
             box.classList.remove('opacity-0', 'pointer-events-none');
             box.classList.add('opacity-100', 'animate-slide-down');
             
-            // នៅតែរក្សាការផ្ទុះផាវពេលចុច copy ជោគជ័យ
             if(text.includes('រួចរាល់')) {
                 confetti({ particleCount: 40, spread: 50, origin: { y: 0.2 }, zIndex: 300, colors: ['#F59E0B', '#BE123C']});
             }
